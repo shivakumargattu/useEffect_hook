@@ -1,8 +1,23 @@
 import logo from './logo.svg';
 import './App.css';
 
-function App() {
+import { useState,useEffect } from 'react';
 
+function App() {
+   
+  const [data,setdata]=useState([]);
+
+  useEffect (()=>{
+    const getData= async()=>{
+
+      const response=await fetch("https://jsonplaceholder.typicode.com/users")
+      console.log(response.json())
+     
+    
+      
+    }
+ getData()
+  },[])
 
   return (
     <div className="App">
